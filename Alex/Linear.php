@@ -8,6 +8,9 @@ class Linear{
 		if ($a != 0) {
 			$x = -1*$b/$a;
 			$this->x = $x;
+			Log::log("Equation is linear");
+			Log::log("Equation $a*x+$b=0");
+			
 			
 			return array($x);
 		}

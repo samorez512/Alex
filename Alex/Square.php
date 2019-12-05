@@ -14,7 +14,8 @@ class Square extends Linear implements \core\EquationInterface{
 		   return $this->ur($b,$c);
 		}
 		$dir = sqrt($this->dir($a, $b, $c));
-	
+		Log::log("Equation is quadratic");
+		Log::log("Equation $a*x^2+$b*x+$c=0");
 		if ($dir > 0) {
 			$x = (-1*$b + ($dir))/(2*$a);
 			$x2 = (-1*$b - ($dir))/(2*$a);
