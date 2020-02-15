@@ -33,6 +33,17 @@ final class Tests extends TestCase
     $roots = $solver->solve(0, 0, 0);
   }
 
+  public function testSquare3(): void
+  {
+    $solver = new Kazikov\Square(1, -5, 6);
+    $roots = $solver->solve(1, -5, 6);
+
+    $this->assertEquals(
+      $roots,
+      [3, 2]        
+    );
+  }
+
   public function testLinear1(): void
   {
     $solver = new Kazikov\Linear();
@@ -50,5 +61,16 @@ final class Tests extends TestCase
     
     $solver = new Kazikov\Linear();
     $root = $solver->ur(0, 0);
+  }
+
+  public function testLinear3(): void
+  {
+    $solver = new Kazikov\Linear();
+    $root = $solver->ur(3, 12);
+
+    $this->assertEquals(
+      $root,
+      [-4]        
+    );
   }
 }
